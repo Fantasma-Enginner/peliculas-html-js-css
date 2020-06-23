@@ -1,0 +1,327 @@
+body {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: rgba(5, 5, 5, 0.986);
+
+    font-family: "Noto Sans JP", sans-serif;
+    scroll-behavior: smooth;
+}
+
+@media (max-width: 520px) {
+
+    /**** HUMBURGER-MENU ONLY ****/
+    #menu {
+        background: transparent;
+        margin: 17px 4px 0px 15px;
+        width: 29px;
+        height: 28px;
+        cursor: pointer;
+    }
+
+    .bar {
+        height: 4px;
+        width: 100%;
+        background: rgb(255, 255, 255);
+        border-radius: 10px;
+        display: block;
+        transition: 0.3s ease-in-out;
+    }
+
+    #bar2 {
+        transform: translateY(3px);
+    }
+
+    #bar3 {
+        transform: translateY(6px);
+    }
+
+    .change .bar {
+        background-color: rgb(245, 245, 245);
+    }
+
+    .change #bar1 {
+        transform: translateY(4px) rotateZ(-45deg);
+        width: 88%;
+    }
+
+    .change #bar2 {
+        opacity: 0;
+    }
+
+    .change #bar3 {
+        transform: translateY(-4px) rotateZ(45deg);
+        width: 88%;
+    }
+
+    /** NAVIGATION MENU**/
+    .nav {
+        width: 300px;
+        position: absolute;
+        left: -32px;
+        top: 28px;
+        display: none;
+    }
+
+    .nav li {
+        list-style: none;
+        padding: 10px 0;
+        margin: 0;
+    }
+
+    .nav li a {
+        font-weight: bold;
+        color: white;
+        text-decoration: none;
+    }
+
+    .nav li a:hover {
+        border-bottom: 3px solid green;
+    }
+
+    .change {
+        display: block;
+    }
+
+    .menu-bg {
+        z-index: 1;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle,
+                rgb(219, 52, 52) 0%,
+                rgb(75, 21, 21) 100%);
+        transition: 0.3s ease-in-out;
+        margin: 15px 4px 0px 8px;
+    }
+
+    .change-bg {
+        width: 139.6%;
+        height: 248px;
+        transform: translate(-30%, -50%);
+        z-index: 1;
+    }
+
+    .menu-bg,
+    #menu-bar {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+
+    #menu-bar {
+        z-index: 2;
+    }
+
+    /**** BRAND-NAME ONLY ****/
+    .main-brand>h1 {
+        margin: 8px 0 5px 32%;
+        font-size: 1.5em;
+        font-family: "Monda", sans-serif !important;
+    }
+
+    .two-span {
+        background: transparent;
+        font-family: "Kaushan Script", cursive;
+
+        color: rgb(202, 81, 22);
+    }
+
+    .one-span {
+        background: transparent;
+
+        color: rgb(171, 0, 0);
+    }
+
+    /**** LOGIN & JOIN NOW ONLY ***/
+    .login-join>a {
+        color: white;
+        padding: 6px;
+        font-size: 0.8em;
+    }
+
+    .login-join {
+        margin-top: -35px;
+        margin-left: 77%;
+    }
+
+    /**** CATEGORIES  ***/
+    .categories {
+        width: 93%;
+        margin-left: -7%;
+        overflow: hidden;
+        margin-bottom: 6px;
+        font-family: "Noto Sans JP", sans-serif;
+        background: linear-gradient(to right,
+                rgba(221, 103, 34, 0.39) 0%,
+                rgba(221, 155, 34, 0.04) 100%);
+    }
+
+    .categories>li {
+        display: inline-flex;
+        padding: 1% 3%;
+        transition: 0.1s ease;
+        margin-bottom: 0;
+    }
+
+    .categories>li:hover {
+        border-bottom: 3px solid rgb(185, 36, 36);
+    }
+
+    .categories a {
+        font-size: 0.8em;
+        color: white;
+        text-decoration: none;
+    }
+
+    /****** IMAGES *******/
+    img {
+        width: 100%;
+    }
+
+    .pic>img {
+        width: 120px;
+        margin-right: 10px;
+        border-radius: 4px;
+    }
+
+    .pic {
+        display: grid;
+        grid-template-columns: repeat(10, auto);
+        margin-bottom: 10px;
+        overflow: scroll;
+    }
+
+    .pics {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /*** CATEGORIES  *****/
+    .categories-choose {
+        width: 100%;
+        height: 270px;
+        background-color: rgb(2, 2, 2);
+        margin: 0;
+        padding: 7px 0;
+        text-align: center;
+    }
+
+    .categories-choose h3 {
+        margin: 2px;
+    }
+
+    .category-list {
+        display: flex;
+        flex-wrap: wrap;
+        position: absolute;
+        left: -19;
+    }
+
+    .category-list li {
+        margin: 8px 7px;
+        list-style: none;
+        font-size: small;
+        background-color: #dc1111;
+        padding: 5px;
+    }
+
+    /******** SEARCH-BAR-BOTTOM  ******/
+    .search-bottom-bar {
+        text-align: center;
+        width: 100%;
+        height: 75px;
+        background: rgb(19, 16, 16);
+        margin-top: 4px;
+    }
+
+    .search {
+        width: 70%;
+        height: 30%;
+        margin-top: 16px;
+        border-radius: 15px;
+    }
+
+    /**** ICONS-ONLY ****/
+    #login-logo {
+        width: 20px;
+        height: 20px;
+        position: relative;
+        bottom: -5px;
+    }
+
+    .srch-icon {
+        color: rgb(185, 10, 10);
+        font-size: 1.6em;
+        margin-top: 2px;
+    }
+
+    .user-icon {
+        color: rgb(255, 255, 255);
+        font-size: 2em;
+        margin-right: -12px;
+    }
+
+    .login-icon {
+        font-size: 1.2em;
+        color: rgb(44, 27, 27);
+        position: relative;
+        top: 2px;
+        left: 4px;
+    }
+
+    /***** BUTTONS ****/
+    #info-banner {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        border: none;
+        padding: 2px 8px;
+        color: white;
+        font-weight: 600;
+    }
+
+    .hot {
+        background: #cc9e12;
+    }
+
+    .new {
+        background: rgb(8, 194, 37);
+    }
+
+    /**** FOOTER ONLY ****/
+    footer {
+        width: fit-content;
+    }
+
+    .social-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-box li {
+        list-style: none;
+        margin-left: 16px;
+        font-size: xx-large;
+    }
+
+    #back-top {
+        text-align: center;
+        position: absolute;
+        right: 5px;
+        background: #cc9e12;
+        padding: 4px 10px;
+        border: none;
+        font-size: x-large;
+    }
+
+    #back-top a {
+        color: white;
+        text-decoration: none;
+    }
+
+    /* toggled class for movie option in nav */
+    .hideThis {
+        display: none;
+    }
+}
